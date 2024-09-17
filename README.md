@@ -6,7 +6,7 @@ Official implementation of Synch-Transformer for synchronous motion captioning:
 
 [<span style="font-size: 25px;"> <span style="color:darkviolet; font-weight:darkbold; font-size: 30px">Transformer with Controlled Attention for Synchronous Captioning </span>]()
 
-[![arxiv](https://img.shields.io/badge/arXiv-Synch_Transformer-cyan?logo=arxiv)]()
+[![arxiv](https://img.shields.io/badge/arXiv-Synch_Transformer-cyan?logo=arxiv)](http://arxiv.org/abs/2409.09177)
 [![License](https://img.shields.io/badge/License-MIT-green)]()
 
 </div>
@@ -71,4 +71,13 @@ Thus, the cross attentions of tokens are used for **progressive text generation*
     <img src="Frozen/frozen_all_4015.png" width=500">
 </div>
 
-
+## Bibtex
+If you find this work useful in your research, please cite:
+```
+@article{radouane2024ControlledTransformer,
+      title={Transformer with Controlled Attention for Synchronous Motion Captioning}, 
+      author={Karim Radouane and Sylvie Ranwez and Julien Lagarde and Andon Tchechmedjiev},
+      journal = {arXiv},
+      year = {2024} 
+}
+```
