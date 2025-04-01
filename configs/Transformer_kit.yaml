@@ -1,0 +1,56 @@
+#program: train.py
+method: grid
+metric:
+  goal: maximize
+  name: val_bleu
+parameters:
+  spatial:
+    value: False
+  concat :
+    value : False
+  align_schedule :
+    value : False
+  scheduling:
+    value: 0
+  resume:
+    value: 0
+  path:
+    value: None
+  dw_factor :
+    value : 2
+  max_trg_len:
+    value: 20
+  dropout:
+    value : 0.1
+  hid_dim:
+    values : [64]
+  lr:
+    value : 0.0001
+  batch_size :
+    value : 128
+  epochs:
+    value : 500
+  D :
+    values : [10]
+  r :
+    values : [5]
+  margin :
+    value : 1
+  h_enc :
+    value : 4
+  h_dec :
+    value : 4
+  L0 : # weight for first align position loss
+    values : [0,0.001]
+  L1: # weight for order loss
+    value :  1000
+  L2 : # weights for final align position loss
+    values : [0]
+  optimizer:
+    value: adam
+  tokenizer:
+    value : spacy_noSpace
+  pf_ :
+    value : 2
+  max_length:
+    value: 1000

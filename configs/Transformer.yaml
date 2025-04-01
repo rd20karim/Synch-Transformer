@@ -1,0 +1,91 @@
+#program: train.py
+method: grid
+metric:
+  goal: maximize
+  name: val_bleu
+parameters:
+  spatial:
+    value: False
+  concat:
+    value: False
+  align_schedule:
+    value: False
+  scheduling:
+    value: 0
+  resume:
+    value: 0
+  path:
+    value: None
+  dw_factor:
+    value: 2
+  max_trg_len:
+    value: 20
+  dropout:
+    value: 0.1
+  hid_dim:
+    values: [128]
+  lr:
+    value: 0.0001
+  batch_size:
+    value: 128
+  epochs:
+    value: 500
+  D:
+    values: [10]
+  r:
+    values: [10] #3
+  margin:
+    value: 1
+  h_enc:
+    value: 4
+  h_dec:
+    value: 4
+  L0: # weight for first align position loss
+    values: [0.1]
+  L1: # weight for order loss
+    value: 1000
+  L2: # weights for final align position loss
+    values: [0]
+  optimizer:
+    value: adam
+  tokenizer:
+    value: spacy_noSpace
+  pf_:
+    value: 2
+  max_length:
+    value: 100
+
+# FIRST GLOBAL SWEEP CONFIG
+##program: train.py
+#method: random
+#metric:
+#  goal: maximize
+#  name: val_bleu
+#parameters:
+#  dropout:
+#    value : 0.1
+#  hid_dim:
+#    values : [64,128]
+#  lr:
+#    value : 0.0005
+#  batch_size :
+#    value : 128
+#  epochs:
+#    value : 50
+#  D :
+#    values : [3,5,7,10]
+#  r :
+#    values : [1,2,3,5]
+#  margin :
+#    values : [1,2,3,5]
+#  h_enc :
+#    values : [1,4,8]
+#  h_dec :
+#    values : [1,4]
+#  L0 : # weight for first align position loss
+#    value : 10
+#  L1: # weight for order loss
+#    value : 1000
+#  L2 : # weights for final align position loss
+#    values : [10,0]
+#

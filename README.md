@@ -4,7 +4,7 @@ Official implementation of Synch-Transformer for synchronous motion captioning:
 
 <div align="center">
 
-[<span style="font-size: 25px;"> <span style="color:darkviolet; font-weight:darkbold; font-size: 30px">Transformer with Controlled Attention for Synchronous Captioning </span>]()
+[<span style="font-size: 25px;"> <span style="color:darkviolet; font-weight:darkbold; font-size: 30px">Transformer with Controlled Attention for Synchronous Captioning </span>](https://hal.science/hal-04697946)
 
 [![arxiv](https://img.shields.io/badge/arXiv-Synch_Transformer-cyan?logo=arxiv)](http://arxiv.org/abs/2409.09177)
 [![License](https://img.shields.io/badge/License-MIT-green)]()
@@ -14,6 +14,44 @@ Official implementation of Synch-Transformer for synchronous motion captioning:
 This work introduces a Transformer-based design to address the task of motion-to-text synchronization, as introduced in this previous project [m2t-segmentation](https://github.com/rd20karim/M2T-Segmentation).
 
 **Synchronous captioning** aims to generate text aligned with the time evolution of 3D human motion. Implicitly, this mapping provides fine-grained action recognition and unsupervised event localization with temporal phrase grounding through unsupervised motion-language segmentation.
+
+
+
+## Bibtex
+If you find this work useful in your research, please cite:
+```
+@article{radouane2024ControlledTransformer,
+      title={Transformer with Controlled Attention for Synchronous Motion Captioning}, 
+      author={Karim Radouane and Sylvie Ranwez and Julien Lagarde and Andon Tchechmedjiev},
+      journal = {arXiv},
+      year = {2024} 
+}
+```
+
+## Quick start
+
+```
+conda env create -f environment.yaml
+conda activate wbpy310
+python -m spacy download en-core-web-sm
+```
+You need also to install wandb for hyperparameters tuning: 
+``
+pip install wandb
+``
+## Preprocess datasets
+
+For both HumanML3D and KIT-MLD (augmented versions) you can follow the steps here: [project link](https://github.com/rd20karim/M2T-Segmentation?tab=readme-ov-file#preprocess-dataset)
+
+
+## Training and evaluation
+
+**Training:** Using [train.py](train.py) script allows you to train the model by defining the config file and the dataset path. You can also use the wandb for hyperparameters tuning.
+
+**Evaluation:** Using [evaluate_transformer.py](evaluate_transformer.py) script, you can evaluate the model on the test set by defining the config file and the model checkpoint.
+
+
+Note: More details and Models checkpoints will be available soon.
 
 ## Demonstration
 
@@ -71,13 +109,7 @@ Thus, the cross attentions of tokens are used for **progressive text generation*
     <img src="Frozen/frozen_all_4015.png" width=500">
 </div>
 
-## Bibtex
-If you find this work useful in your research, please cite:
-```
-@article{radouane2024ControlledTransformer,
-      title={Transformer with Controlled Attention for Synchronous Motion Captioning}, 
-      author={Karim Radouane and Sylvie Ranwez and Julien Lagarde and Andon Tchechmedjiev},
-      journal = {arXiv},
-      year = {2024} 
-}
-```
+
+
+
+

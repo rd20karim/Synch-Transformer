@@ -1,0 +1,32 @@
+#program: train.py
+method: grid
+metric:
+  goal: maximize
+  name: val_bleu
+parameters:
+  dropout:
+    value : 0.1
+  hid_dim:
+    value : 128
+  lr:
+    value : 0.0005
+  batch_size :
+    value : 128
+  epochs:
+    value : 150
+  D :
+    value : 5
+  r :
+    value : 5
+  margin :
+    value : 1
+  h_enc :
+    value : 8
+  h_dec :
+    value : 8
+  L0 : # weight for first align position loss
+    value : 10
+  L1: # weight for order loss
+    value : 1000
+  L2 : # weights for final align position loss
+    value : 10
