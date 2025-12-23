@@ -23,8 +23,8 @@ If you find this work useful in your research, please cite:
 @article{radouane2024ControlledTransformer,
       title={Transformer with Controlled Attention for Synchronous Motion Captioning}, 
       author={Karim Radouane and Sylvie Ranwez and Julien Lagarde and Andon Tchechmedjiev},
-      journal = {arXiv},
-      year = {2024} 
+      booktitle = {Proceedings of the Thirty-Sixth AAAI Conference on Artificial Intelligence (AAAI-26)},
+      year      = {2026}
 }
 ```
 
